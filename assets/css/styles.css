@@ -1392,7 +1392,7 @@ img {
   }
 
   .contact__content {
-    grid-template-columns: repear(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .contact__info {

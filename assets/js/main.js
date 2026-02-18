@@ -70,8 +70,8 @@ tabs.forEach(tab => {
 const servicesButtons = document.querySelectorAll('.services__button')
 
 servicesButtons.forEach(button => {
-    const heightInfo = document.querySelector('.services__info')
-    heightInfo.style.height = heightInfo.scrollHeight + 'px'
+    // const heightInfo = document.querySelector('.services__info')
+    // heightInfo.style.height = heightInfo.scrollHeight + 'px'
 
     button.addEventListener('click', () => {
         const servicesCards = document.querySelectorAll('.services__card'),
@@ -129,7 +129,7 @@ const sections = document.querySelectorAll('section[id]')
 const scrollActive = () => {
     const scrollY = window.scrollY
 
-    sections.entries.forEach(section => {
+    sections.forEach(section => {
         const id = section.id,
             top = section.offsetTop - 50,
             height = section.offsetHeight,
@@ -161,7 +161,7 @@ document.addEventListener('mousemove', (e) => {
 cursorMove()
 
 /* Hide custom cursor on links */
-const a = document.querySelector('a')
+const a = document.querySelectorAll('a')
 
 a.forEach(item => {
     item.addEventListener('mouseover', () => {
@@ -181,9 +181,9 @@ const sr = ScrollReveal({
 })
 
 sr.reveal(`.home__image, .projects__container, .work__container, .testimonials__container, .contact__container`)
-sr.reveal(`.home__data`, { delay: 900, origin: 'bottom' })
-sr.reveal(`.home__info`, { delay: 1200, origin: 'bottom' })
-sr.reveal(`.home__social, .home__cv`, { delay: 1500 })
+sr.reveal(`.home__data`, { delay: 400, origin: 'bottom' })
+sr.reveal(`.home__info`, { delay: 800, origin: 'bottom' })
+sr.reveal(`.home__social, .home__cv`, { delay: 900 })
 sr.reveal(`.about__data`, { origin: 'left' })
 sr.reveal(`.about__image`, { origin: 'right' })
 sr.reveal(`.services__card`, { interval: 100 })
